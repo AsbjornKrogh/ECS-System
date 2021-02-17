@@ -1,16 +1,22 @@
 ﻿namespace ECS.Legacy
 {
-    public class Application
-    {
-        public static void Main(string[] args)
-        {
-            var ecs = new ECS(28);
+   public class Application
+   {
+      public static void Main(string[] args)
+      {
+         //Create dependencies 
+         ITempSensor _tempSensor = new TempSensor();
+         IHeater _heater = new Heater();
 
-            ecs.Regulate();
+         //Create ECS sytem class
+         var ecs = new ECS(28, _tempSensor, _heater);
 
-            ecs.SetThreshold(20);
+         ecs.Regulate();
 
-            ecs.Regulate();
-        }
-    }
+         
+         ecs.SetThreshold(20);
+
+    
+      }
+   }
 }
