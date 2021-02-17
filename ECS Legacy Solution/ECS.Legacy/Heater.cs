@@ -1,8 +1,15 @@
 ﻿namespace ECS.Legacy
 {
-    public class Heater
+
+   internal interface IHeater : Heater
+   {
+      void TurnOn();
+      void TurnOff();
+   }
+
+   public class Heater
     {
-        public void TurnOn()
+       public void TurnOn()
         {
             System.Console.WriteLine("Heater is on");
         }
