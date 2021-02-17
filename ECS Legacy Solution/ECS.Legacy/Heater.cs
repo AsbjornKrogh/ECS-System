@@ -1,27 +1,27 @@
 ﻿namespace ECS.Legacy
 {
-
-   internal interface IHeater : Heater
+   public interface IHeater
    {
       void TurnOn();
       void TurnOff();
+      bool RunSelfTest();
    }
 
-   public class Heater
-    {
-       public void TurnOn()
-        {
-            System.Console.WriteLine("Heater is on");
-        }
+   public class Heater : IHeater
+   {
+      public void TurnOn()
+      {
+         System.Console.WriteLine("Heater is on");
+      }
 
-        public void TurnOff()
-        {
-            System.Console.WriteLine("Heater is off");
-        }
+      public void TurnOff()
+      {
+         System.Console.WriteLine("Heater is off");
+      }
 
-        public bool RunSelfTest()
-        {
-            return true;
-        }
-    }
+      public bool RunSelfTest()
+      {
+         return true;
+      }
+   }
 }
