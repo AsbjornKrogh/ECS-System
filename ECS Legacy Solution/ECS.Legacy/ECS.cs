@@ -1,5 +1,4 @@
-﻿using ECS.Legacy;
-
+﻿
 namespace ECS
 {
     public class ECS
