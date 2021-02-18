@@ -1,4 +1,6 @@
-﻿namespace ECS.Legacy
+﻿using ECS.Legacy;
+
+namespace ECS
 {
     public class ECS
     {
@@ -8,9 +10,9 @@
 
         public ECS(int thr, ITempSensor tempSensor, IHeater heater)
         {
+            _tempSensor = tempSensor;
+            _heater = heater;
             SetThreshold(thr);
-            //_tempSensor = new TempSensor();
-            //_heater = new Heater();
         }
 
         public void Regulate()
