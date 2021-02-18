@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ECS;
 
-namespace ECS_Testprogram
+namespace ECS.Testprogram
 {
     class FakeHeater : IHeater
     {

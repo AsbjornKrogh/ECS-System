@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using ECS;
 
-namespace ECS_Testprogram
+namespace ECS.Testprogram
 {
    public class Tests
    {
